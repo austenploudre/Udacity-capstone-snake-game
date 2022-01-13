@@ -105,7 +105,7 @@ std::string Game::GetPlayerName(){
 void Game::SetPlayerName(){
     
     std::string player_name;
-    std::cout<<"Player NAME :::  ";
+    std::cout<<"Player Name:  ";
     std::cin >> player_name;
     this->player_name = player_name;
 }
