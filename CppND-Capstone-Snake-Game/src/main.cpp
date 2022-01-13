@@ -15,16 +15,25 @@ int main() {
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
   Game game(kGridWidth, kGridHeight);
+  
+  //Ask for players name
   game.SetPlayerName();
+  
+  //Ask which difficulty
   game.UpdateDifficulty();
+  
   //start game clock
   auto start = std::chrono::system_clock::now();  
+
+  //start game
   game.Run(controller, renderer, kMsPerFrame);
-  //game.SetPlayerGameTime();
+
   //end game clock
   auto end = std::chrono::system_clock::now();
+  
   //calculate time elapsed
   auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
+  
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Name: " << game.GetPlayerName() << "\n";
   std::cout << "Score: " << game.GetScore() << "\n";
