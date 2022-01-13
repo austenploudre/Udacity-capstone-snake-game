@@ -11,21 +11,18 @@
 class Game {
  public:
   Game(std::size_t grid_width, std::size_t grid_height);
-  void Run(Controller const &controller, Renderer &renderer,
+  void Run(Controller &controller, Renderer &renderer,
            std::size_t target_frame_duration);
   std::string GetPlayerName();
   int GetScore() const;
   int GetSize() const;
-  std::string GetPlayerGameTime();
 
   void SetPlayerName();
   void UpdateDifficulty();
-  void SetPlayerGameTime();  
 
  private:
   Snake snake;
   SDL_Point food;
-  std::string player_game_time;
   std::string player_name;
 
   std::random_device dev;
@@ -36,7 +33,7 @@ class Game {
   int score{0};
 
   void PlaceFood();
-  void Update();
+  void Update(const Controller &controller);
 };
 
 #endif
