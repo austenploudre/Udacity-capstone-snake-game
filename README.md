@@ -1,1 +1,0 @@
-# Udacity-capstone-snake-game
