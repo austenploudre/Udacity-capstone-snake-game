@@ -13,7 +13,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
   PlaceFood();
 }
 
-void Game::Run(Controller const &controller, Renderer &renderer,
+void Game::Run(Controller &controller, Renderer &renderer,
                std::size_t target_frame_duration) {
   Uint32 title_timestamp = SDL_GetTicks();
   Uint32 frame_start;
@@ -21,13 +21,14 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   Uint32 frame_duration;
   int frame_count = 0;
   bool running = true;
+  std::cout << "Game has begun!\n";
 
   while (running) {
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
-    Update();
+    Update(controller);
     renderer.Render(snake, food);
 
     frame_end = SDL_GetTicks();
@@ -53,7 +54,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-void Game::UpdateDifficulty()//-----------------
+void Game::UpdateDifficulty()
 {
   snake.SetDifficulty();
 }
@@ -73,7 +74,10 @@ void Game::PlaceFood() {
   }
 }
 
-void Game::Update() {
+void Game::Update(const Controller &controller) {
+  if (controller.GetPauseState())
+    return;  
+  
   if (!snake.alive) return;
 
   snake.Update();
@@ -96,12 +100,6 @@ std::string Game::GetPlayerName(){
     return player_name;
 }
 
-//std::string Game::GetPlayerGameTime(&start){
-
-    //auto end = std::chrono::system_clock::now();
-    //std::chrono::duration_cast<std::chrono::nanoseconds>(end - &start).count()
-//}
-
 void Game::SetPlayerName(){
     
     std::string player_name;
@@ -110,11 +108,5 @@ void Game::SetPlayerName(){
     this->player_name = player_name;
 }
 
-
-void Game::SetPlayerGameTime(){
-  
-    auto start = std::chrono::system_clock::now();
-    
-} 
 int Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }
