@@ -75,12 +75,16 @@ Loops, Functions, I/O - The project accepts user input and processes the input.
 The project accepts input from a user as part of the necessary operation of the program.
 
 The user has the option to enter their name:
-![image](https://user-images.githubusercontent.com/60715092/149426485-9b4a2704-5bdb-4c85-8f29-2af534b23b6b.png)
+![Screenshot (14)](https://user-images.githubusercontent.com/60715092/149426850-050a5039-c597-4e5a-a232-205469468527.png)
 
-The users name will then be displayed at the end of the game:
-![Screenshot (15)](https://user-images.githubusercontent.com/60715092/149426683-31753678-fecf-452e-9d21-0b8343727d1c.png)
+
+The users name will then be displayed at the end of the game as well as total time elapsed:
+![Screenshot (18)](https://user-images.githubusercontent.com/60715092/149426859-355e48cc-7f43-4752-9382-f9a2a5b6fcff.png)
+
 
 The user has the option to choose a difficulty(Easy, Medium, Hard) with corresponding snake starting speeds:
-![Screenshot (16)](https://user-images.githubusercontent.com/60715092/149426705-c930aba5-b0ea-47e0-9f38-4301176aa297.png)
+![Screenshot (15)](https://user-images.githubusercontent.com/60715092/149426877-6c3e16ca-a9e0-4515-b2bb-097b99396144.png)
+
+![Screenshot (16)](https://user-images.githubusercontent.com/60715092/149426889-16046cdd-7a9e-4b3c-95a4-9542b65c190d.png)
 
 Once the game has started, the user can either pause the game by pressing "P" or can end the game by pressing "Q":
