@@ -13,54 +13,51 @@ void Snake::SetDifficulty()//---------------------------
 
   std::cout << "-----------------------" << std::endl;
   std::cout << "Select a difficulty " << rangeStr << std::endl;
-   std::cout << "1.Easy , 2.Medium , 3.Hard" << std::endl;
+  std::cout << "1.Easy , 2.Medium , 3.Hard" << std::endl;
 
-  while (true)
+while (true)
   {
-    int input = scanf("%f", &userSpeed);
-    switch (input)
+    int isNum = scanf("%f", &userSpeed);
+    switch (isNum)
     {
-
-    case 1:
-    {
-       if (userSpeed < minStartSpeed && userSpeed > maxStartSpeed)
+      case 1: 
       {
-        std::cerr << "Please provide valid number between " << rangeStr << std::endl;
-      }
-    break;    
-    };
-
-
-    case 2:
-    {
-        if (userSpeed == 1.0)
-        {
+        if(userSpeed == 1.0)
+        {  
           speed = 0.2;
+          std::cout << "Snake speed set to 0.2" << std::endl;
+          return;
         }
-    break;
-    };
-
+      }  
+      
+      case 2: 
+      {
+        if(userSpeed == 2.0)
+        {  
+          speed = 0.2;
+          std::cout << "Snake speed set to 0.4" << std::endl;
+          return;
+        }
+      }
+      
+      case 3: 
+      {
+        if(userSpeed == 3.0)
+        {  
+          speed = 0.2;
+          std::cout << "Snake speed set to 0.6" << std::endl;
+          return;
+        }
+      }
     
-    case 3:
-    {
-        if (userSpeed == 2.0)
-        {
-          speed = 0.4;
-        }
+   }
+    
+    std::cerr << "\n\n\nOoops!! Please provide a valid decimal between " << rangeStr << std::endl;
     break;
-    };
-
-    case 4:
-    {
-        if (userSpeed == 3.0)
-        {
-          speed = 0.6;
-        }
-    break;
-    };        
-    }
-  }
+   
+  };
 }
+  
 void Snake::Update() {
   SDL_Point prev_cell{
       static_cast<int>(head_x),
