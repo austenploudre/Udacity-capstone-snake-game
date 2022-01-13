@@ -16,7 +16,7 @@ int main() {
   Controller controller;
   Game game(kGridWidth, kGridHeight);
   game.SetPlayerName();
-  //game.UpdateDifficulty();
+  game.UpdateDifficulty();
   //start game clock
   auto start = std::chrono::system_clock::now();  
   game.Run(controller, renderer, kMsPerFrame);
