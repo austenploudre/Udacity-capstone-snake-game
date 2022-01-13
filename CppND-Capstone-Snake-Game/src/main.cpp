@@ -29,6 +29,6 @@ int main() {
   std::cout << "Name: " << game.GetPlayerName() << "\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
-  std::cout << "Elapsed Time: " << duration.count() << "seconds" << "\n";
+  std::cout << "Elapsed Time: " << duration.count() << " seconds" << "\n";
   return 0;
 }
