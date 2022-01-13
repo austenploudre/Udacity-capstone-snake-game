@@ -44,3 +44,43 @@ This work is licensed under a
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+Rubric Items Matched
+1
+Object Oriented Programming - The project uses Object Oriented Programming techniques.
+The project code is organized into classes with class attributes to hold the data, and class methods to perform tasks.
+
+To meet this requirement, a GetPlayerName method class to the Game class in game.cpp to hold information about the user's name. The class uses the member functions GetPlayerName and SetPlayerName to get and display user's name once game ends(line 98, line 103).
+
+2
+Object Oriented Programming - Classes use appropriate access specifiers for class members.
+All class data members are explicitly specified as public, protected, or private.
+
+Within game.h, the private variable string player_name is used to store player name(line 26).
+
+3
+Object Oriented Programming - Class constructors utilize member initialization lists.
+All class members that are set to argument values are initialized through member initialization lists.
+
+Within controller.h the Controller is initialized with the pause state set to false(line 9).
+
+4
+Object Oriented Programming - Classes abstract implementation details from their interfaces.
+All class member functions document their effects, either through function names, comments, or formal documentation. Member functions do not change program state in undocumented ways.
+
+To meet this requirment, all non-trivial methods have one line comments explaining their function.
+
+5
+Loops, Functions, I/O - The project accepts user input and processes the input.
+The project accepts input from a user as part of the necessary operation of the program.
+
+The user has the option to enter their name:
+![image](https://user-images.githubusercontent.com/60715092/149426485-9b4a2704-5bdb-4c85-8f29-2af534b23b6b.png)
+
+The users name will then be displayed at the end of the game:
+![Screenshot (15)](https://user-images.githubusercontent.com/60715092/149426683-31753678-fecf-452e-9d21-0b8343727d1c.png)
+
+The user has the option to choose a difficulty(Easy, Medium, Hard) with corresponding snake starting speeds:
+![Screenshot (16)](https://user-images.githubusercontent.com/60715092/149426705-c930aba5-b0ea-47e0-9f38-4301176aa297.png)
+
+Once the game has started, the user can either pause the game by pressing "P" or can end the game by pressing "Q":
