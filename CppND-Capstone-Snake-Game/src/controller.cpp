@@ -9,6 +9,7 @@ void Controller::ChangeDirection(Snake &snake, Snake::Direction input,
   return;
 }
 
+//Pauses the game by changing pause state
 void Controller::ChangePauseState() { _pause = !_pause; }
 
 bool Controller::GetPauseState() const { return _pause; }
