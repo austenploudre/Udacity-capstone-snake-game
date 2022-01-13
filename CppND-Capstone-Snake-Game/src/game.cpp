@@ -54,6 +54,7 @@ void Game::Run(Controller &controller, Renderer &renderer,
   }
 }
 
+//Calls SetDifficulty method to set starting speed of snake
 void Game::UpdateDifficulty()
 {
   snake.SetDifficulty();
@@ -95,11 +96,13 @@ void Game::Update(const Controller &controller) {
   }
 }
 
+//Get player name
 std::string Game::GetPlayerName(){
 
     return player_name;
 }
 
+//Set players name
 void Game::SetPlayerName(){
     
     std::string player_name;
