@@ -5,9 +5,14 @@
 
 class Controller {
  public:
-  void HandleInput(bool &running, Snake &snake) const;
+  //initialize pause state
+  Controller(): _pause(false){}
+  void HandleInput(bool &running, Snake &snake);
+  void ChangePauseState();
+  bool GetPauseState() const;
 
  private:
+  bool _pause;  // manage pause state
   void ChangeDirection(Snake &snake, Snake::Direction input,
                        Snake::Direction opposite) const;
 };
