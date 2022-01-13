@@ -35,8 +35,8 @@ class Snake {
   bool growing{false};
   int grid_width;
   int grid_height;
-  float minStartSpeed{1.0};//------------------------
-  float maxStartSpeed{3.0};//-------------------------
+  float minStartSpeed{1.0};
+  float maxStartSpeed{3.0};
 };
 
 #endif
