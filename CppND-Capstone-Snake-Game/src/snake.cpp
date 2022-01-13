@@ -26,7 +26,6 @@ void Snake::SetDifficulty()//---------------------------
        if (userSpeed < minStartSpeed && userSpeed > maxStartSpeed)
       {
         std::cerr << "Please provide valid number between " << rangeStr << std::endl;
-        return true;
       }
     break;    
     };
@@ -37,7 +36,6 @@ void Snake::SetDifficulty()//---------------------------
         if (userSpeed == 1.0)
         {
           speed = 0.2;
-         return false;
         }
     break;
     };
@@ -48,7 +46,6 @@ void Snake::SetDifficulty()//---------------------------
         if (userSpeed == 2.0)
         {
           speed = 0.4;
-          return false;
         }
     break;
     };
@@ -58,10 +55,9 @@ void Snake::SetDifficulty()//---------------------------
         if (userSpeed == 3.0)
         {
           speed = 0.6;
-          return false;
         }
     break;
-    };
+    };        
     }
   }
 }
