@@ -2,7 +2,8 @@
 #include <cmath>
 #include <iostream>
 
-void Snake::SetDifficulty()//---------------------------
+//Sets snake initial speed to 0.2,0.4 or 0.6
+void Snake::SetDifficulty()
 {
   float userSpeed;
   char rangeBuffer[25];
