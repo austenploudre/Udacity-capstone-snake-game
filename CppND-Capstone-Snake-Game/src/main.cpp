@@ -15,11 +15,9 @@ int main() {
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
   Game game(kGridWidth, kGridHeight);
-  
-  //Ask for players name
   game.SetPlayerName();
   
-  //Ask which difficulty
+  //Updates snake speed according to difficulty chosen
   game.UpdateDifficulty();
   
   //start game clock
@@ -38,6 +36,6 @@ int main() {
   std::cout << "Name: " << game.GetPlayerName() << "\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
-  std::cout << "Elapsed Time: " << duration.count() << " seconds" << "\n";
+  std::cout << "Elapsed Time: " << duration.count() << " seconds" << "\n";  
   return 0;
 }
