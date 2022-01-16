@@ -18,8 +18,8 @@ void Snake::SetDifficulty()
 
 while (true)
   {
-    int isNum = scanf("%f", &userSpeed);
-    switch (isNum)
+    int input = scanf("%f", &userSpeed);
+    switch (input)
     {
       case 1: 
       {
