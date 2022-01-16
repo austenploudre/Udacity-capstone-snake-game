@@ -13,10 +13,10 @@ class Game {
   Game(std::size_t grid_width, std::size_t grid_height);
   void Run(Controller &controller, Renderer &renderer,
            std::size_t target_frame_duration);
+ 
   std::string GetPlayerName();
   int GetScore() const;
   int GetSize() const;
-
   void SetPlayerName();
   void UpdateDifficulty();
 
@@ -24,16 +24,16 @@ class Game {
   Snake snake;
   SDL_Point food;
   std::string player_name;
-
+  
   std::random_device dev;
   std::mt19937 engine;
   std::uniform_int_distribution<int> random_w;
   std::uniform_int_distribution<int> random_h;
-
+  
   int score{0};
-
   void PlaceFood();
   void Update(const Controller &controller);
+
 };
 
 #endif
