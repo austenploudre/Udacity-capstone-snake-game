@@ -97,10 +97,7 @@ void Game::Update(const Controller &controller) {
 }
 
 //Get player name
-std::string Game::GetPlayerName(){
-
-    return player_name;
-}
+std::string Game::GetPlayerName(){ return player_name; }
 
 //Set players name
 void Game::SetPlayerName(){
@@ -109,6 +106,7 @@ void Game::SetPlayerName(){
     std::cout<<"Player Name:  ";
     std::cin >> player_name;
     this->player_name = player_name;
+
 }
 
 int Game::GetScore() const { return score; }
