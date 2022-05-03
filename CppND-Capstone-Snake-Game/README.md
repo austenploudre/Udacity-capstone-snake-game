@@ -88,8 +88,10 @@ The user has the option to choose a difficulty(Easy, Medium, Hard) with correspo
 ![Screenshot (16)](https://user-images.githubusercontent.com/60715092/149426889-16046cdd-7a9e-4b3c-95a4-9542b65c190d.png)
 
 Additionally, there is a poison block initialized to a random position similar to the food bloxks which slow the snake's speed by 0.2 and subtract one point from the overall score:
+
 ![Screenshot (23)](https://user-images.githubusercontent.com/60715092/166523722-5c52f65c-63ee-4fd6-bf59-a37c3e752f83.png)
 
 Once the game has started, the user can either pause the game by pressing "P" or can end the game by pressing "Q" which will be displayed in the terminal with each instance:
+
 ![Screenshot (25)](https://user-images.githubusercontent.com/60715092/166523840-7be5d291-41d7-4555-8164-85277a921adb.png)
 
