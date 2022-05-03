@@ -23,6 +23,7 @@ class Game {
  private:
   Snake snake;
   SDL_Point food;
+  SDL_Point poison;
   std::string player_name;
   
   std::random_device dev;
@@ -32,6 +33,7 @@ class Game {
   
   int score{0};
   void PlaceFood();
+  void PlacePoison();
   void Update(const Controller &controller);
 
 };
