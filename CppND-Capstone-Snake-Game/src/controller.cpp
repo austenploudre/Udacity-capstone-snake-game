@@ -44,6 +44,11 @@ void Controller::HandleInput(bool &running, Snake &snake) {
           ChangePauseState();
           std::cout << "Game paused" << std::endl;
           break;
+        
+        case SDLK_o:
+          ChangePauseState();
+          std::cout << "Game resumed" << std::endl;
+          break;
                 
         case SDLK_q:
           std::cout << "Game Quit" << std::endl;
